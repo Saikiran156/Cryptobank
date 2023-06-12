@@ -1,0 +1,27 @@
+{
+  "name": "crypto-bank-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test:ethers": "NODE_ENV=test mocha ./spec/test/ether.js --timeout=20000 --exit ",
+    "test:tokens": "NODE_ENV=test mocha ./spec/test/tokens.js --timeout=20000 --exit",
+    "test": "npm run test:ethers && npm run test:tokens"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "child": "^0.0.3",
+    "child_process": "^1.0.2",
+    "crypto-js": "^4.1.1",
+    "mocha": "^10.2.0",
+    "process": "^0.11.10",
+    "randombytes": "^2.1.0",
+    "sequelize": "^6.32.0",
+    "sequelize-cli": "^6.6.1"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3"
+  }
+}
