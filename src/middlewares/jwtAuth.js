@@ -2,9 +2,9 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 function jwtAuthorization(req, res, next) {
   const headerAuth = req.headers.authorization;
-  // console.log('...........', headerAuth, '11111111');
+
   const token = headerAuth && headerAuth.split(' ')[1];
-  // console.log('.............', token, '..............................');
+
   if (token == null) {
     res.send('Invalid Token');
   } else {

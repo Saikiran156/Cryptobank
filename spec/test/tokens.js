@@ -79,7 +79,7 @@ describe('Creating Token Models in the Database', () => {
       });
     console.log(response.status);
     expect(response.status).to.be.equal(200);
-    // console.log(response.body, '...................................re');
+
   });
 
   it('Fetching User Token Balance From The Table', async () => {

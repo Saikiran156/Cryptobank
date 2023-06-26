@@ -1,11 +1,11 @@
 const { ethers } = require('../../../models');
 const { transactionlog } = require('../../../models');
 const transaction = async (req, res) => {
-  // console.log(ethers, req.body);
+
   let data = await ethers.findOne({
     where: { connectedAddress: req.body.signerAddress },
   });
-  // console.log(data);
+
 
   try {
     if (req.body.operation == 'deposit') {

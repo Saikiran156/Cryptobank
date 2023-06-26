@@ -4,13 +4,7 @@ const tokenBalance = async (req, res) => {
   //   console.log(tokens, req.body, '......................');
   const data = await tokenlog.findAll({
     where: {
-      // [Op.and]: [
-      //   {
-      //     networkname: {
-      //       [Op.like]: req.body.network,
-      //     },
-      //   },
-      // ],
+
       networkname: { [Op.like]: req.body.network },
       [Op.or]: [
         {
@@ -24,7 +18,6 @@ const tokenBalance = async (req, res) => {
           },
         },
       ],
-      //   from: req.body.signerAddress,
     },
   });
   console.log(data, 'tokenbalance');
